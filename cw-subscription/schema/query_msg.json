@@ -3,7 +3,7 @@
   "title": "QueryMsg",
   "anyOf": [
     {
-      "description": "Query one plan, response type is Plan",
+      "description": "Query one plan, response type is Plan<Addr>",
       "type": "object",
       "required": [
         "plan"
@@ -24,7 +24,7 @@
       "additionalProperties": false
     },
     {
-      "description": "List plans, support pagination",
+      "description": "List plans, support pagination, response type is PlansResponse",
       "type": "object",
       "required": [
         "list_plans"
@@ -82,7 +82,7 @@
       "additionalProperties": false
     },
     {
-      "description": "List subscriptions, support pagination",
+      "description": "List subscriptions, support pagination, response type is SubscriptionsResponse",
       "type": "object",
       "required": [
         "list_subscriptions"

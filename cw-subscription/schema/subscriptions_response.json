@@ -99,6 +99,7 @@
       "required": [
         "deposit",
         "expires",
+        "last_collection_time",
         "next_collection_time"
       ],
       "properties": {
@@ -112,10 +113,8 @@
           "$ref": "#/definitions/Expiration"
         },
         "last_collection_time": {
-          "type": [
-            "integer",
-            "null"
-          ],
+          "description": "Initialized to current block time created",
+          "type": "integer",
           "format": "int64"
         },
         "next_collection_time": {
