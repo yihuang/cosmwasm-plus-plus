@@ -5,10 +5,10 @@
         "homepage": "https://crypto.org",
         "owner": "crypto-org-chain",
         "repo": "chain-main",
-        "rev": "428c6c73ece9f961e54dfa1159b015c0ae96afcb",
-        "sha256": "0sg2d1bygmlmnknkvn9cqcjp7pp8w553wmzc5fgx8c8xn8lqjzxg",
+        "rev": "9889a8af2204d8ca186616021704d3ddfc112f2b",
+        "sha256": "00csdjriyrspi9hcy8949d7j9bzzv6qkf5if6kns2nlnj66lbylg",
         "type": "tarball",
-        "url": "https://github.com/crypto-org-chain/chain-main/archive/428c6c73ece9f961e54dfa1159b015c0ae96afcb.tar.gz",
+        "url": "https://github.com/crypto-org-chain/chain-main/archive/9889a8af2204d8ca186616021704d3ddfc112f2b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "abb55ca1315f9a0dce5e3bce73d6e23e37f8b23a",
-        "sha256": "1wzcnbgy010d3wqi6374my6ax5x2prkxkglpbihnqyhzfn7qv35g",
+        "rev": "f4c4ddae041241dc0c9d5628038826103958fdfc",
+        "sha256": "192bnsjrccvix9kd1cg895alghpdd73hdpis2s03b1p2rn1y2pkp",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/abb55ca1315f9a0dce5e3bce73d6e23e37f8b23a.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/f4c4ddae041241dc0c9d5628038826103958fdfc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "wasmd": {
@@ -41,10 +41,22 @@
         "homepage": null,
         "owner": "CosmWasm",
         "repo": "wasmd",
-        "rev": "144a85ae007ead4464f7df3be89e6998e5e86bd0",
-        "sha256": "1nikps9gr2r7dwidk9aa1af8i9b9vq7c219rc2w7bsl19xg8j3wa",
+        "rev": "3d4b3d184f896549028f8ce015cebecb467c10b4",
+        "sha256": "15pcqfpzxn7wlzqxx9wzrws554x888i397510g514b1y9kadm99j",
         "type": "tarball",
-        "url": "https://github.com/CosmWasm/wasmd/archive/144a85ae007ead4464f7df3be89e6998e5e86bd0.tar.gz",
+        "url": "https://github.com/CosmWasm/wasmd/archive/3d4b3d184f896549028f8ce015cebecb467c10b4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "wasmvm": {
+        "branch": "main",
+        "description": "Go bindings to the running cosmwasm contracts with wasmer ",
+        "homepage": null,
+        "owner": "CosmWasm",
+        "repo": "wasmvm",
+        "rev": "141f36430a5c4be586ce77e881210a47c511a7f5",
+        "sha256": "14frzb2kkv2prvpnz0mzh4x76is94jlc7mymndazhikirfg31rjr",
+        "type": "tarball",
+        "url": "https://github.com/CosmWasm/wasmvm/archive/141f36430a5c4be586ce77e881210a47c511a7f5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
