@@ -1,17 +1,5 @@
 import json
 
-from .utils import Command
-
-wasmd = Command("wasmd")
-default_args = dict(
-    home="data/chainmaind/node0",
-    keyring_backend="test",
-)
-
-tx_default_args = dict(
-    chain_id="chainmaind",
-)
-
 
 def parse_events(rsp):
     return [
@@ -20,11 +8,11 @@ def parse_events(rsp):
     ]
 
 
-def test_basic():
-    addr = wasmd("keys", "show", "community", "-a", **default_args).strip().decode()
+def test_basic(cluster):
+    addr = cluster("keys", "show", "community", "-a").strip().decode()
     print("addr", addr)
     rsp = json.loads(
-        wasmd(
+        cluster(
             "tx",
             "wasm",
             "store",
@@ -32,8 +20,6 @@ def test_basic():
             "-y",
             from_=addr,
             gas=2000000,
-            **default_args,
-            **tx_default_args
         )
     )
     assert rsp.get("code", 0) == 0
@@ -45,7 +31,7 @@ def test_basic():
         },
     }
     rsp = json.loads(
-        wasmd(
+        cluster(
             "tx",
             "wasm",
             "instantiate",
@@ -55,9 +41,7 @@ def test_basic():
             label="subscription",
             admin=addr,
             from_=addr,
-            **default_args,
-            **tx_default_args
         )
     )
-    assert rsp.get("code", 0) == 0
+    assert rsp.get("code", 0) == 0, rsp["raw_log"]
     _ = parse_events(rsp)[0]["contract_address"]
