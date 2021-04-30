@@ -5,7 +5,7 @@ import sources.nixpkgs {
       wasmvm = pkgs.rustPlatform.buildRustPackage rec {
         name = "wasmvm";
         src = sources.wasmvm;
-        cargoSha256 = sha256:1wpkxqck4kzyy67vp1b9kl9cdjqi7i9jx5m5x12r2dcsfp1bpzp8;
+        cargoSha256 = sha256:15z852h2fv73vjdnpis9yfxc3c3gqy6d67cp1m78xvhh7l5m2j0z;
         buildInputs = pkgs.lib.optionals pkgs.stdenv.isDarwin [
           pkgs.darwin.apple_sdk.frameworks.Security
           pkgs.darwin.libiconv
@@ -16,7 +16,7 @@ import sources.nixpkgs {
         name = "wasmd";
         src = sources.wasmd;
         subPackages = [ "cmd/wasmd" ];
-        vendorSha256 = sha256:1jrgbs28f1glnks3vak14w3ldnhp9iiil6pcqgjf2xar3627ln75;
+        vendorSha256 = sha256:1kqmm8f80l7lahlcq101z7ynj6r2fgp8s56k8dfq38dc0lp2pxkk;
         doCheck = false;
         postFixup = pkgs.lib.optionalString pkgs.stdenv.isLinux ''
           patchelf --set-rpath "${wasmvm}/lib" $out/bin/wasmd
