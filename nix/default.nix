@@ -18,7 +18,7 @@ import sources.nixpkgs {
         subPackages = [ "cmd/wasmd" ];
         vendorSha256 = sha256:1kqmm8f80l7lahlcq101z7ynj6r2fgp8s56k8dfq38dc0lp2pxkk;
         doCheck = false;
-        postFixup = pkgs.lib.optionalString pkgs.stdenv.isLinux ''
+        preFixup = pkgs.lib.optionalString pkgs.stdenv.isLinux ''
           patchelf --set-rpath "${wasmvm}/lib" $out/bin/wasmd
         '' + pkgs.lib.optionalString pkgs.stdenv.isDarwin ''
           install_name_tool -change @rpath/libwasmvm.dylib "${wasmvm}/lib/libwasmvm.dylib" $out/bin/wasmd
